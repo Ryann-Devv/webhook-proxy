@@ -263,11 +263,11 @@ httpService:PostAsync("https://discord.com/api/webhooks/{WEBHOOK_ID}/{WEBHOOK_TO
 )</code></pre>
                         <p>
                             It's very simple to convert this over to WebhookProxy. Just swap out
-                            <code>discord.com</code> with <code class="hostname">webhook.lewistehminerz.dev</code>.
+                            <code>discord.com</code> with <code class="hostname">https://ryann-devv.github.io/webhook-proxy</code>.
                         </p>
                         <pre><code class="language-lua">local httpService = game:GetService("HttpService")
 
-httpService:PostAsync("https://<span class="hostname">webhook.lewistehminerz.dev</span>/api/webhooks/{WEBHOOK_ID}/{WEBHOOK_TOKEN}",
+httpService:PostAsync("https://<span class="hostname">https://ryann-devv.github.io/webhook-proxy</span>/api/webhooks/{WEBHOOK_ID}/{WEBHOOK_TOKEN}",
 	httpService:JSONEncode({
 		content = "Hello, world!"
 	})
@@ -277,7 +277,7 @@ httpService:PostAsync("https://<span class="hostname">webhook.lewistehminerz.dev
                         <p>If you're sending many requests a second, consider switching to the queue system:</p>
                         <pre><code class="language-lua">local httpService = game:GetService("HttpService")
 
-httpService:PostAsync("https://<span class="hostname">webhook.lewistehminerz.dev</span>/api/webhooks/{WEBHOOK_ID}/{WEBHOOK_TOKEN}/queue",
+httpService:PostAsync("https://<span class="hostname">https://ryann-devv.github.io/webhook-proxy</span>/api/webhooks/{WEBHOOK_ID}/{WEBHOOK_TOKEN}/queue",
 	httpService:JSONEncode({
 		content = "Hello, world!"
 	})
@@ -305,7 +305,7 @@ httpService:PostAsync("https://<span class="hostname">webhook.lewistehminerz.dev
                     const id = parts[1];
                     const token = parts[2];
 
-                    output.value = `https://webhook.lewistehminerz.dev/api/webhooks/${id}/${token}`;
+                    output.value = `https://ryann-devv.github.io/webhook-proxy/api/webhooks/${id}/${token}`;
                 } else {
                     output.value = '';
                 }
